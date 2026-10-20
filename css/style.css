@@ -1,0 +1,114 @@
+/* ==========================================================================
+   ETALASEKU DIGITAL HUB & ACADEMY — WARM ORGANIC HARVEST DESIGN SYSTEM
+   Referensi: DESIGN.md, screen.png, screen1.jpg, screen2.jpg
+   ========================================================================== */
+
+:root {
+  --bg-canvas: #FBF6E6;
+  --surface-card: #F5EBCB;
+  --surface-cream-light: #FFFDF7;
+  --mustard-primary: #F5C542;
+  --burnt-secondary: #B45309;
+  --leaf-tertiary: #2F6B3A;
+  --cocoa-dark: #3B2A1A;
+  --border-sand: #E8DDB8;
+  --text-muted: #6E5B47;
+}
+
+body {
+  background-color: var(--bg-canvas);
+  color: var(--cocoa-dark);
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  overflow-x: hidden;
+}
+
+.font-display {
+  font-family: 'Fraunces', 'Playfair Display', Georgia, serif;
+}
+
+/* Wavy & Torn Paper Section Dividers (DESIGN.md) */
+.wavy-paper-bottom {
+  position: relative;
+}
+.wavy-paper-bottom::after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  height: 26px;
+  background-size: 32px 26px;
+  background-repeat: repeat-x;
+  background-image: radial-gradient(circle at 16px 26px, #FBF6E6 16px, transparent 16.5px);
+  z-index: 10;
+  pointer-events: none;
+}
+
+.wavy-paper-top {
+  position: relative;
+}
+.wavy-paper-top::before {
+  content: "";
+  position: absolute;
+  top: -25px;
+  left: 0;
+  width: 100%;
+  height: 26px;
+  background-size: 32px 26px;
+  background-repeat: repeat-x;
+  background-image: radial-gradient(circle at 16px 0px, #FBF6E6 16px, transparent 16.5px);
+  z-index: 10;
+  pointer-events: none;
+}
+
+/* Vertical Torn Paper Edge for Login Split Screen (screen1.jpg) */
+@media (min-width: 1024px) {
+  .torn-vertical-right {
+    position: relative;
+  }
+  .torn-vertical-right::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: -12px;
+    width: 24px;
+    height: 100%;
+    background-size: 24px 32px;
+    background-repeat: repeat-y;
+    background-image: radial-gradient(circle at 24px 16px, #FFFDF7 12px, transparent 12.5px);
+    z-index: 20;
+    pointer-events: none;
+  }
+}
+
+/* Warm Elevation Shadows */
+.shadow-warm-sm {
+  box-shadow: 0 8px 24px -4px rgba(59, 42, 26, 0.06), 0 2px 6px -1px rgba(59, 42, 26, 0.04);
+}
+.shadow-warm-lg {
+  box-shadow: 0 16px 36px -6px rgba(59, 42, 26, 0.12), 0 6px 12px -2px rgba(59, 42, 26, 0.06);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #FBF6E6;
+}
+::-webkit-scrollbar-thumb {
+  background: #D1C5AE;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #B45309;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
